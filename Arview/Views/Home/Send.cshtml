@@ -1,0 +1,13 @@
+﻿@model  Arview.Models.GuessModel
+
+
+    <div id="answers">
+       
+
+            @foreach (var item in @Model.Answers.Zip(Model.Guess, Tuple.Create))
+            {
+                <p>Ответ от меня: @item.Item1.Text</p>
+                <p>Твое загаданное слово: @item.Item2.Guesses</p>
+            }
+        
+    </div>
